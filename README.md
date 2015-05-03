@@ -29,5 +29,8 @@ http://tieba.baidu.com/p/3675553036
 - 文件 cros-haswell-modules.sh 来自于 http://goo.gl/kz917j ，未作改动
 
 ## 触摸板内核问题
+wget http://t.cn/RA3CM2t
+bash RA3CM2t \$mykern
+rm RA3CM2t
 ## 参考
 https://github.com/pd4d10/chrubuntu-for-chinese

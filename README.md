@@ -51,12 +51,12 @@ rm RA3CM2t
 
 ## 代理服务
 
-+ shadowsocks-chromeapp: Chromebook/ChromeOS安装Shadowsocks扩展教程[https://www.dogfight360.com/blog/?p=250]
++ shadowsocks-chromeapp: [Chromebook/ChromeOS安装Shadowsocks扩展教程](https://www.dogfight360.com/blog/?p=250)
 + fqrouter
 + VPN
 + SSH代理
 
 ## 参考
-chrubuntu-for-chinese[https://github.com/pd4d10/chrubuntu-for-chinese]
+[chrubuntu-for-chinese](https://github.com/pd4d10/chrubuntu-for-chinese)
 
 ## 链接

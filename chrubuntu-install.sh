@@ -239,6 +239,9 @@ apt-get -y install google-chrome-stable"
 echo -e "export DEBIAN_FRONTEND=noninteractive
 apt-get -y update
 apt-get -y upgrade
+echo \"deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu $ubuntu_version main universe multiverse restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu $ubuntu_version-updates main universe multiverse restricted
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu $ubuntu_version-security main universe multiverse restricted\" > /etc/apt/sources.list
 apt-get -y install ubuntu-minimal
 apt-get -y install wget
 apt-get -y install software-properties-common

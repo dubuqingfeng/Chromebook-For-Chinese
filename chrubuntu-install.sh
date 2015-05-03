@@ -237,9 +237,9 @@ apt-get update
 apt-get -y install google-chrome-stable"
 
 echo -e "export DEBIAN_FRONTEND=noninteractive
-echo \"deb http://mirrors.sohu.com/ubuntu/ $ubuntu_version main universe multiverse restricted
-deb http://mirrors.sohu.com/ubuntu/ $ubuntu_version-updates main universe multiverse restricted
-deb http://mirrors.sohu.com/ubuntu/ $ubuntu_version-security main universe multiverse restricted\" > /etc/apt/sources.list
+echo \"deb http://debian.ustc.edu.cn/ubuntu $ubuntu_version main universe multiverse restricted
+deb http://debian.ustc.edu.cn/ubuntu $ubuntu_version-updates main universe multiverse restricted
+deb http://debian.ustc.edu.cn/ubuntu $ubuntu_version-security main universe multiverse restricted\" > /etc/apt/sources.list
 apt-get -y update
 apt-get -y upgrade
 apt-get -y install ubuntu-minimal

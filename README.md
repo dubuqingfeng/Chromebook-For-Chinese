@@ -15,6 +15,7 @@ http://tieba.baidu.com/p/3675553036
 2. 不要登录，确保联网，然后按下 CTRL + ALT + =>(F2) 进入 TTY
 3. 登录，用户名 chronos，密码不填
 4. 输入命令：
+
 	curl -L -O http://t.cn/RA3xv2I; sudo bash RA3xv2I
 5. 根据提示选择分区大小，将硬盘重新分区，之后会自动重启一次
 6. 重新分区后，需要再执行一次上面的命令。注意默认会安装最新版的 Ubuntu，如需安装 LTS 版本请在后一句最后加上 ` -u lts`，更多选项请加上 ` -h` 查看

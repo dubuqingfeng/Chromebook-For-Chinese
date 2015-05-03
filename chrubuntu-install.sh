@@ -237,11 +237,18 @@ apt-get update
 apt-get -y install google-chrome-stable"
 
 echo -e "export DEBIAN_FRONTEND=noninteractive
+echo \"deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-backports main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-proposed main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-security main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-updates main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-backports main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-proposed main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-security main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-updates main multiverse restricted universe\" > /etc/apt/sources.list
 apt-get -y update
 apt-get -y upgrade
-echo \"deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu $ubuntu_version main universe multiverse restricted
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu $ubuntu_version-updates main universe multiverse restricted
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu $ubuntu_version-security main universe multiverse restricted\" > /etc/apt/sources.list
 apt-get -y install ubuntu-minimal
 apt-get -y install wget
 apt-get -y install software-properties-common

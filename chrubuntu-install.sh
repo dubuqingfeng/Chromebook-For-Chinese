@@ -237,16 +237,16 @@ apt-get update
 apt-get -y install google-chrome-stable"
 
 echo -e "export DEBIAN_FRONTEND=noninteractive
-echo \"deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version main multiverse restricted universe
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-backports main multiverse restricted universe
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-proposed main multiverse restricted universe
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-security main multiverse restricted universe
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-updates main multiverse restricted universe
-deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version main multiverse restricted universe
-deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-backports main multiverse restricted universe
-deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-proposed main multiverse restricted universe
-deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-security main multiverse restricted universe
-deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ $ubuntu_version-updates main multiverse restricted universe\" > /etc/apt/sources.list
+echo \"deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-backports main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-proposed main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-security main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-updates main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-backports main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-proposed main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-security main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ vivid-updates main multiverse restricted universe\" > /etc/apt/sources.list
 apt-get -y update
 apt-get -y upgrade
 apt-get -y install ubuntu-minimal

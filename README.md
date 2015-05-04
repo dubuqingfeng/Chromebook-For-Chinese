@@ -8,7 +8,7 @@ chromebook到手以后，使用chrome os的时候需要激活，登录好谷歌�
 
 http://tieba.baidu.com/p/3675553036
 
-## 在 Chromebook 上安装 ChrUbuntu
+## 在 Chromebook 上安装 Ubuntu
 
 ### 安装方法
 
@@ -36,12 +36,18 @@ http://tieba.baidu.com/p/3675553036
   1. 修改官方源为国内源，将 cdimage 的源改成 USTC，更新源换成 THU
   2. 去掉了安装 Google Chrome 的部分
   3. 最新15.04版本内核为3.19，应该不需要替换内核补丁。最后是用U盘装好的。
+  4. [Desktop install](https://github.com/karlssonjohan/ubuntu-on-chromebook)
 - 文件 cros-haswell-modules.sh 来自于 http://goo.gl/kz917j ，未作改动
 
 #### Chrubuntu
 U盘引导安装
 用到的工具：Win32DiskImager
+[关于使用后的U盘恢复](http://blog.csdn.net/u011538446/article/details/11590825)
 #### Cronton
+[Chromium OS Universal Chroot Environment](https://github.com/dnschneid/crouton)
+#### elementary OS
+
+[elementary OS installation script for Chromebooks](https://github.com/Setsuna666/elementaryos-chromebook)
 
 ## 运行安卓程序
 

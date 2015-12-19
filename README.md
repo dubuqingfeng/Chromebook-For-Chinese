@@ -8,6 +8,16 @@ chromebook到手以后，使用chrome os的时候需要激活，登录好谷歌�
 
 http://tieba.baidu.com/p/3675553036
 
+## 替换原厂固件和操作系统
+
+适用于：
+
+1. 具备一定的 GNU/Linux 知识，希望在 Chromebook 上获得完整的 GNU/Linux 作业环境的用户;
+
+2. 因为种种原因希望替换 Google 提供的网络服务的用户。
+
+请点击 [为 Chromebook 刷写第三方操作系统](linux-on-seabios-and-coreboot.md) 。
+
 ## 在 Chromebook 上安装 Ubuntu
 
 ### 安装方法

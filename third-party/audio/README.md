@@ -24,7 +24,7 @@ Crouton声卡驱动更新记录
 改为：
 
 ```
-( wget -O "$archive" "http://t.cn/R4t1AcW" 2>&1 \
+( wget -O "$archive" "http://t.cn/R4t18A3" 2>&1 \
                                     || echo "Error fetching CRAS" ) | tee "$log"
 
 ```

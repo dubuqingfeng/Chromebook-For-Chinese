@@ -10,6 +10,27 @@ Crouton声卡驱动更新记录
 
 ##使用方法
 
+1.下载[Cronton](https://github.com/dnschneid/crouton)，```wget https://goo.gl/fd3zc```
+
+2.更改**targets/audio**文件:
+
+第47行：
+
+```
+( wget -O "$archive" "$urlbase/$ADHD_HEAD.tar.gz" 2>&1 \
+                                    || echo "Error fetching CRAS" ) | tee "$log"
+```
+
+改为：
+
+```
+( wget -O "$archive" "http://t.cn/R4t1AcW" 2>&1 \
+                                    || echo "Error fetching CRAS" ) | tee "$log"
+
+```
+
+3.直接运行```installer/main.sh```,或者make自己的crouton。
+
 英文原版：
 
 ```

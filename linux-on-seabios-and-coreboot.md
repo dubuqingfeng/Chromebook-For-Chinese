@@ -70,6 +70,71 @@ sudo dd if=Fedora-Live-Workstation-x86_64-23-10.iso of=/dev/sdc bs=8M && sync
 
 ## 解决休眠唤醒
 
-TODO
+### 方法一：通过 unbind 音频设备和拉黑 ehci-pci
 
+首先增加一个新的文件 `/etc/tmpfiles.d/cros-acpi-wakeup.conf` 并修改内容为： 
+
+```
+# /etc/tmpfiles.d/cros-acpi-wakeup.conf
+w /proc/acpi/wakeup - - - - EHCI
+w /proc/acpi/wakeup - - - - HDEF
+w /proc/acpi/wakeup - - - - XHCI
+w /proc/acpi/wakeup - - - - LID0
+w /proc/acpi/wakeup - - - - TPAD
+w /proc/acpi/wakeup - - - - TSCR
+```
+
+然后再新建一个新的 systemd 脚本 `/usr/lib/systemd/system-sleep/cros-sound-suspend.sh`：
+
+```
+# /usr/lib/systemd/system-sleep/cros-sound-suspend.sh
+#!/bin/bash
+
+case $1/$2 in
+  pre/*)
+    # Unbind ehci for preventing error 
+    echo -n "0000:00:1d.0" | tee /sys/bus/pci/drivers/ehci-pci/unbind
+    # Unbind snd_hda_intel for sound
+    echo -n "0000:00:1b.0" | tee /sys/bus/pci/drivers/snd_hda_intel/unbind
+    echo -n "0000:00:03.0" | tee /sys/bus/pci/drivers/snd_hda_intel/unbind
+    ;;
+  post/*)
+    # Bind ehci for preventing error 
+    echo -n "0000:00:1d.0" | tee /sys/bus/pci/drivers/ehci-pci/bind
+    # bind snd_hda_intel for sound
+    echo -n "0000:00:1b.0" | tee /sys/bus/pci/drivers/snd_hda_intel/bind
+    echo -n "0000:00:03.0" | tee /sys/bus/pci/drivers/snd_hda_intel/bind
+    ;;
+esac
+```
+
+然后在 `/etc/default/grub` 里增加一句：
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="modprobe.blacklist=ehci_pci"
+```
+
+然后 rebuild `grub.cfg`：
+
+```
+grub2-mkconfig -o /boot/grub/grub2.cfg
+```
+
+提醒一下，上面这句是发行版相关的，你用的 Ubuntu 的话估计命令会不太一样。
+
+最后重启：
+
+```
+sudo reboot
+```
+
+### 方法二：通过刷写 CoolStar 的 BIOS 
+
+想办法从 CoolStar 那里要一个 build 好的 BIOS ，然后直接 `flashrom -w <filename>` 。他的 BIOS 调的比较细致，具体调了什么你可以在 G+ 上亲自问他。
+
+## 参考资料
+
+[1] Arch Wiki, [https://wiki.archlinux.org/index.php/Chrome\_OS\_devices](https://wiki.archlinux.org/index.php/Chrome_OS_devices)  
+[2] A Post on Arch Community, [https://bbs.archlinux.org/viewtopic.php?pid=1364521#p1364521](https://bbs.archlinux.org/viewtopic.php?pid=1364521#p1364521)  
+[3] A Blog Post, [http://blog.sergiodj.net/post/2014-09-26-fedora-on-acer-c720p/](http://blog.sergiodj.net/post/2014-09-26-fedora-on-acer-c720p/)  
 

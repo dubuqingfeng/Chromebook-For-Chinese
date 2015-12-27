@@ -10,7 +10,7 @@ Crouton声卡驱动更新记录
 
 ##使用方法
 
-1.下载[Cronton](https://github.com/dnschneid/crouton)，```wget https://goo.gl/fd3zc```
+1.下载[Cronton](https://github.com/dnschneid/crouton)，打包下载，**Download Zip**
 
 2.更改**targets/audio**文件:
 

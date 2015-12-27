@@ -66,10 +66,12 @@ U盘引导安装：
 
 [Chromium OS Universal Chroot Environment](https://github.com/dnschneid/crouton)
 
+```wget https://goo.gl/fd3zc```
+
 [Cronton安装需要的声卡驱动](https://raw.githubusercontent.com/dubuqingfeng/Chromebook-For-Chinese/master/third-party/audio/20151212.tar.gz)
 
 ##### 声卡驱动修改说明：
-1.下载[Cronton](https://github.com/dnschneid/crouton)，```wget https://goo.gl/fd3zc```
+1.下载[Cronton](https://github.com/dnschneid/crouton)，打包下载，**Download Zip**
 
 2.更改**targets/audio**文件:
 

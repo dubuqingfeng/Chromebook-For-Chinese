@@ -132,4 +132,9 @@ sudo reboot
 
 想办法从 CoolStar 那里要一个 build 好的 BIOS ，然后直接 `flashrom -w <filename>` 。他的 BIOS 调的比较细致，具体调了什么你可以在 G+ 上亲自问他。
 
+## 参考资料
+
+[1] Arch Wiki, [https://wiki.archlinux.org/index.php/Chrome\_OS\_devices](https://wiki.archlinux.org/index.php/Chrome_OS_devices)  
+[2] A Post on Arch Community, [https://bbs.archlinux.org/viewtopic.php?pid=1364521#p1364521](https://bbs.archlinux.org/viewtopic.php?pid=1364521#p1364521)  
+[3] A Blog Post, [http://blog.sergiodj.net/post/2014-09-26-fedora-on-acer-c720p/](http://blog.sergiodj.net/post/2014-09-26-fedora-on-acer-c720p/)  
 

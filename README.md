@@ -68,7 +68,7 @@ U盘引导安装：
 
 ```wget https://goo.gl/fd3zc```
 
-[Cronton安装需要的声卡驱动](https://raw.githubusercontent.com/dubuqingfeng/Chromebook-For-Chinese/master/third-party/audio/20151222.tar.gz)
+[Cronton安装需要的声卡驱动](https://raw.githubusercontent.com/dubuqingfeng/Chromebook-For-Chinese/master/third-party/audio/latest.tar.gz)
 
 ##### 声卡驱动修改说明：
 1.下载[Cronton](https://github.com/dnschneid/crouton)，打包下载，**Download Zip**
@@ -85,7 +85,7 @@ U盘引导安装：
 改为：
 
 ```
-( wget -O "$archive" "http://t.cn/R4t18A3" 2>&1 \
+( wget -O "$archive" "http://t.cn/R46YOzM" 2>&1 \
                                     || echo "Error fetching CRAS" ) | tee "$log"
 
 ```

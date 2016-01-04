@@ -24,7 +24,7 @@ Crouton声卡驱动更新记录
 改为：
 
 ```
-( wget -O "$archive" "http://t.cn/R4t18A3" 2>&1 \
+( wget -O "$archive" "http://t.cn/R46YOzM" 2>&1 \
                                     || echo "Error fetching CRAS" ) | tee "$log"
 
 ```
@@ -42,6 +42,26 @@ but you'll be missing build-time stuff like the Makefile.
 ```
 
 ##更新记录
+20160104:
+
+```
+commit	418181cd234babbd3deafbd50307105de743ad5e
+committer	chrome-bot <chrome-bot@chromium.org>	Wed Dec 30 23:29:06 2015
+```
+```
+CRAS: alsa_card - Don't allow cards without a control
+
+A recent change allowed for cards without a control.  That was stupid,
+without a control there is no way to discover devices on the card.
+Revert that part, but keep the part that allows for mixer-less cards.
+
+BUG=chromium:572996
+TEST=unittest and test with mixerless type-c dock
+
+Signed-off-by: Dylan Reid <dgreid@chromium.org>
+Change-Id: Ifa4e4bf0bb66efb965924c6a2f795c8183230814
+Reviewed-on: https://chromium-review.googlesource.com/319976
+```
 
 20151227:
 

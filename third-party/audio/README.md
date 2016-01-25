@@ -2,7 +2,7 @@ Crouton声卡驱动更新记录
 ==
 
 ##说明
-由于众所周知的原因，Crouton脚本安装会卡到声卡驱动那块。
+由于众所周知的原因，Crouton脚本安装会卡到[声卡驱动](https://chromium.googlesource.com/chromiumos/third_party/adhd/+/master)那块。
 
 因此修改脚本，以适应国情。
 
@@ -42,6 +42,26 @@ but you'll be missing build-time stuff like the Makefile.
 ```
 
 ##更新记录
+20160125:
+```
+commit	522d3d92f1780e126a22e7abb25c1f34cc6bb328
+committer	chrome-bot <chrome-bot@chromium.org>	Wed Jan 20 22:25:28 2016
+```
+```
+CRAS: rstream - close the shm fd
+
+Don't leak the shm_fd.
+
+BUG=chromium:575772
+TEST=rstream_unittest.  Play and record audio from several streams, and
+switch devices on Samus.
+
+Change-Id: I12e14396025afb8d12a07ef871d909be46763abc
+Signed-off-by: Dylan Reid <dgreid@chromium.org>
+Reviewed-on: https://chromium-review.googlesource.com/322417
+Reviewed-by: Ben Zhang <benzh@chromium.org>
+```
+
 20160104:
 
 ```

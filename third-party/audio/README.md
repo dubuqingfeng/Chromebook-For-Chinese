@@ -42,11 +42,32 @@ but you'll be missing build-time stuff like the Makefile.
 ```
 
 ##更新记录
+20160330:
+
+```
+commit	bb0e945c6117de3725f4c1b92e277d80173a99fc
+committer	chrome-bot <chrome-bot@chromium.org>	Wed Mar 30 09:15:07 2016
+```
+
+```
+UCM config: glados and chell: Don't apply speaker EQ/DRC to headphones
+
+Set the OutputDspName to empty for the Headphone jack, so that
+get_active_dsp_name doesn't return the default "speaker_eq" dsp
+for the headphone node.
+
+BUG=chrome-os-partner:51560
+TEST=On Chell set some extreme speaker EQ values in dsp.ini, listen
+to headphone playback and confirm the speaker EQ/DRC is not applied.
+```
+
 20160125:
+
 ```
 commit	522d3d92f1780e126a22e7abb25c1f34cc6bb328
 committer	chrome-bot <chrome-bot@chromium.org>	Wed Jan 20 22:25:28 2016
 ```
+
 ```
 CRAS: rstream - close the shm fd
 
@@ -55,11 +76,6 @@ Don't leak the shm_fd.
 BUG=chromium:575772
 TEST=rstream_unittest.  Play and record audio from several streams, and
 switch devices on Samus.
-
-Change-Id: I12e14396025afb8d12a07ef871d909be46763abc
-Signed-off-by: Dylan Reid <dgreid@chromium.org>
-Reviewed-on: https://chromium-review.googlesource.com/322417
-Reviewed-by: Ben Zhang <benzh@chromium.org>
 ```
 
 20160104:
@@ -77,10 +93,6 @@ Revert that part, but keep the part that allows for mixer-less cards.
 
 BUG=chromium:572996
 TEST=unittest and test with mixerless type-c dock
-
-Signed-off-by: Dylan Reid <dgreid@chromium.org>
-Change-Id: Ifa4e4bf0bb66efb965924c6a2f795c8183230814
-Reviewed-on: https://chromium-review.googlesource.com/319976
 ```
 
 20151227:
@@ -100,11 +112,4 @@ of USB nodes to avoid confusion.
 
 BUG=chromium:535982
 TEST=Plug Jabra speakerphone, verify the mic name on UI.
-
-Change-Id: I4c5c16a459262f43d62bf7489d41270a334b2feb
-Reviewed-on: https://chromium-review.googlesource.com/319311
-Commit-Ready: Hsinyu Chao <hychao@chromium.org>
-Tested-by: Hsinyu Chao <hychao@chromium.org>
-Reviewed-by: Cheng-Yi Chiang <cychiang@chromium.org>
-Reviewed-by: Dylan Reid <dgreid@chromium.org>
 ```

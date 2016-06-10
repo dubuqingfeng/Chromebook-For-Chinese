@@ -42,6 +42,28 @@ but you'll be missing build-time stuff like the Makefile.
 ```
 
 ##更新记录
+20160610:
+```
+commit	828868cb145790177903b68e229a397376e60c0c
+committer	chrome-bot <chrome-bot@chromium.org>	Thu Jun 09 02:17:42 2016
+```
+```
+CRAS: Allow ALSA period_frames to be specified.
+
+Some devices need to setup the period_frames before audio is written
+to the mmap in order to configure down-stream devices such as a DSP
+that pulls the data from the memory map based on a timer.
+
+This change allows the period_frames to be specified per io-device,
+by adding a new UCM configuration parameter. Configuration of the
+period frames is done within the normal ALSA hwparam setup.
+
+BUG=None
+TEST=When MinPeriodFrames is not used, nothing changes.
+When MinPeriodFrames is defined, the value is modified within
+the device's ALSA hwparams.
+Add unit tests to cover the new configuration.
+```
 20160330:
 
 ```

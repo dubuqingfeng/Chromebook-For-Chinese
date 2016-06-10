@@ -5,10 +5,6 @@ chromebook到手以后，使用Chrome os的时候需要激活，登录好谷歌�
 
 激活的时候正常需要翻墙，可以使用fqrouter2等进行手机USB分享，不过fqrouter是root后的android设备使用起来更佳，应该也可以局域网中使用shadowsocks代理服务，chromebook连接同一个局域网，设置代理激活。
 
-如果不翻墙的话，应该参考这个帖子：
-
-http://tieba.baidu.com/p/3675553036
-
 ## 替换原厂固件和操作系统
 
 适用于：
@@ -54,8 +50,6 @@ http://tieba.baidu.com/p/3675553036
   4. [Desktop install](https://github.com/karlssonjohan/ubuntu-on-chromebook)
 - 文件 cros-haswell-modules.sh 来自于 [短链接goo.gl](http://goo.gl/kz917j) ，未作改动
 
-#### Chrubuntu
-
 U盘引导安装：
 
 用到的工具：Win32DiskImager
@@ -65,6 +59,8 @@ U盘引导安装：
 #### Cronton
 
 [Chromium OS Universal Chroot Environment](https://github.com/dnschneid/crouton)
+
+下载官方Cronton:
 
 ```wget https://goo.gl/fd3zc```
 
@@ -114,7 +110,5 @@ rm RA3CM2t
 + fqrouter2
 + VPN
 + SSH代理
-
-## 参考
 
 ## 链接
